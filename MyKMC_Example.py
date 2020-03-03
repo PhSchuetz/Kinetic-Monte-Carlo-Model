@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Mar  3 11:06:10 2020
 
-@author: Philipp
 """
 import numpy as np
 #import MyKMC_OOP as MyKMC
