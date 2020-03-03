@@ -30,3 +30,5 @@ The diffusion on the surface is described by nearest-neighbour (NN) hopping of u
 3. Evaporation of material
 If the surface exhibits a BO<sub>2</sub>-termination it can locally convert to an AO-termiantion (i.e., a<sub>i,j</sub> = a<sub>i,j</sub> - 0.5). The AO-termination is considered thermodynamically stable. Hence, the evaporation rate is given by:
 e<sub>i,j</sub> = 
+
+$$ax^2+bx+c=0$$
