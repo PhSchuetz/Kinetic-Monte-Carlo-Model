@@ -1,5 +1,7 @@
 # Kinetic-Monte-Carlo-Model
-This is a simple Kinetic-Monte-Carlo model I extended such that it incorporates the volatilization of an unstable surface layer during Pulsed Laser Deposition of ternary perovskite oxides.
+This is a simple Kinetic-Monte-Carlo model that describes the growth dynamics during Pulsed Laser Deposition of ternary perovskite oxides (ABO<sub>3</sub>) along the (100) crystal direction and simulates the intensity of the specular Reflection High-Energy Electron Diffraction (RHEED) signal in the step density model. 
+
+In particular, this model is designed to describe the growth of materials with volatile B-side termination such as SrIrO<sub>3</sub> or SrRuO<sub>3</sub>. When grown on an A-side-terminated substrate (e.g. TiO<sub>3</sub>-terminated SrTiO<sub>3</sub>), conventionally, a A-side terminated film structure would be expected. However, if the B-cation is prone to the formation of a volatile compound upon over-oxidation (e.g. IrO<sub>3</sub> for SrIrO<sub>3</sub> or Ru<sub>2</sub>O<sub>4</sub>/RuO<sub>4</sub> for SrRu<sub>3</sub>) a termination conversion to an A-side termination can be observed during growth. Depending on the substrate temperature and oxygen partial pressure this conversion may stretch over the time needed for the deposition of one or several atomic monolayers. This model was designed to simulate the effect of this conversion onto the observed intensity oscillations of the specular RHEED signal during growth.
 
 The basic idea of the Kinetic-Monte-Carlo simulation was adopted from the following publications:
 
