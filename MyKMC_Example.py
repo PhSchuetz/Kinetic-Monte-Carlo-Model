@@ -14,6 +14,7 @@ Example = KMC_Model(DimSize=200,
 					theta=0, 
 					h0=1e7, 
 					StepDensityType = 0)
+
 # Number of total laer pulses in this simulation
 TotalPulses = 120
 # Time resolution of the CCD camera: TimeStep

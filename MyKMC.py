@@ -1,7 +1,6 @@
 import numpy as np
 import scipy.constants as sp
 
-
 class KMC_Model:
 	"""
 	This class describes a simple Kinetic-Monte-Carlo (KMC) simulation of 
