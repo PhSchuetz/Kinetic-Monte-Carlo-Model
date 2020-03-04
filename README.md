@@ -22,12 +22,15 @@ A solid-on-solid model is adopted, which allows neither vacancies nor overhangs.
 The growth dynamics are modelled by a series of discrete events. These are
 
 1. Deposition/ ablation of material
+
 ...The deposition occurs frequently with a deposition rate f (typically 1-3 Hz) (i.e., after a time n T = n/f). A number N of ABO<sub>3</sub> unit cells is added to the surface randomly (i.e., a<sub>i,j</sub> = a<sub>i,j</sub> + 1 if u < 1/N, where u is a random number between 0 and 1)
 
 2. Diffusion of material
+
 ...The diffusion on the surface is described by nearest-neighbour (NN) hopping of unit cells of ABO<sub>3</sub>. The hopping rate h<sub>i,j</sub> is the product of an attempt rate h<sub>0</sub> and an Arrhenius-type probability of success per attempt. The activation energy E<sub>i,j</sub> is determined by a site-independent surface energy barrier E<sub>S</sub>, a nearest-neighbour binding energy barrier E<sub>B</sub> and the number of nearest-neighbours n<sub>i,j</sub> at site (i,j): E<sub>i,j</sub> = E<sub>S</sub> + n<sub>i,j</sub> E<sub>B</sub>. The direction of hopping is random.
 
 3. Evaporation of material
+
 ...If the surface exhibits a BO<sub>2</sub>-termination it can locally convert to an AO-termiantion (i.e., a<sub>i,j</sub> = a<sub>i,j</sub> - 0.5). The AO-termination is considered thermodynamically stable. Hence, the evaporation rate is given by:
 e<sub>i,j</sub> = 
 
