@@ -18,7 +18,7 @@ The basic idea of the Kinetic-Monte-Carlo simulation was adopted from the follow
 ## The model
 A solid-on-solid model is adopted, which allows neither vacancies nor overhangs. The substrate is represented by a simple cubic lattice, described by a NxN matrix A. The entries a<sub>i,j</sub> describe the height of the lattice at side (i,j). Periodic boundary conditions apply, i.e. (i,j) = (i+N,j) = (i, j+N). The AO-BO<sub>2</sub>-AO-BO<sub>2</sub>-... sequence of perovskite materials along the (100)-direction is always conserved.
 
-## Growth dynamics
+## Growth kinetics
 The growth dynamics are modelled by a series of discrete events. These are
 
 1. Deposition/ ablation of material
@@ -27,10 +27,23 @@ The growth dynamics are modelled by a series of discrete events. These are
 
 2. Diffusion of material
 
-...The diffusion on the surface is described by nearest-neighbour (NN) hopping of unit cells of ABO<sub>3</sub>. The hopping rate h<sub>i,j</sub> is the product of an attempt rate h<sub>0</sub> and an Arrhenius-type probability of success per attempt. The activation energy E<sub>i,j</sub> is determined by a site-independent surface energy barrier E<sub>S</sub>, a nearest-neighbour binding energy barrier E<sub>B</sub> and the number of nearest-neighbours n<sub>i,j</sub> at site (i,j): E<sub>i,j</sub> = E<sub>S</sub> + n<sub>i,j</sub> E<sub>B</sub>. The direction of hopping is random.
+   The diffusion on the surface is described by nearest-neighbour (NN) hopping of unit cells of ABO<sub>3</sub>. The hopping rate h<sub>i,j</sub> is the product of an attempt rate h<sub>0</sub> and an Arrhenius-type probability of success per attempt. The activation energy E<sub>i,j</sub> is determined by a site-independent surface energy barrier E<sub>S</sub>, a nearest-neighbour binding energy barrier E<sub>B</sub> and the number of nearest-neighbours n<sub>i,j</sub> at site (i,j): E<sub>i,j</sub> = E<sub>S</sub> + n<sub>i,j</sub> E<sub>B</sub>. The direction of hopping is random.
 
 3. Evaporation of material
 
-...If the surface exhibits a BO<sub>2</sub>-termination it can locally convert to an AO-termiantion (i.e., a<sub>i,j</sub> = a<sub>i,j</sub> - 0.5). The AO-termination is considered thermodynamically stable. Hence, the evaporation rate is given by:
-e<sub>i,j</sub> = 
+   If the surface exhibits a BO<sub>2</sub>-termination it can locally convert to an AO-termiantion (i.e., a<sub>i,j</sub> = a<sub>i,j</sub> - 0.5). The AO-termination is considered thermodynamically stable. The evaporation rate is the product of an attempt rate h<sub>0</sub> and an Arrhenius-type probability of success per attempt with the activation energy E<sub>e</sub>
 
+## Time evolution
+The events take place instantaneously and in between events the system's state does not change. The distribution P(T) of time intervals T between events is given by P(T) dT = R_t exp(-R_t T) dT, where R_t = Sum<sub>i,j</sub> (h<sub>i,j</sub> + e<sub>i,j</sub>) is the total transition rate. Therefore, the time between events is given by T = - ln[r<sub>1</sub>(0:1)]/R_t, where r<sub>1</sub>(0:1) is a random number between 0 and 1.
+
+## Event and site selection 
+The type of event is determined by generating a random number r<sub>1</sub>(0:1) and testing for the inequalities
+
+0 < r<sub>1</sub>(0:1) R_t < Sum<sub>i,j</sub> h<sub>i,j</sub> and
+h<sub>i,j</sub> < r<sub>1</sub>(0:1) R_t < Sum<sub>i,j</sub> (h<sub>i,j</sub> + e<sub>i,j</sub>) = R_t
+
+Then the site is found by testing the inequality
+r<sub>1</sub>(0:1) R_t > Sum<sub>k,l</sub><sup>i-1,j-1</sup> h<sub>k,l</sub>
+
+
+## Step-density model
