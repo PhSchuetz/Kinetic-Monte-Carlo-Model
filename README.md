@@ -40,10 +40,13 @@ The events take place instantaneously and in between events the system's state d
 The type of event is determined by generating a random number r<sub>1</sub>(0:1) and testing for the inequalities
 
 0 < r<sub>1</sub>(0:1) R_t < Sum<sub>i,j</sub> h<sub>i,j</sub> and
+
 h<sub>i,j</sub> < r<sub>1</sub>(0:1) R_t < Sum<sub>i,j</sub> (h<sub>i,j</sub> + e<sub>i,j</sub>) = R_t
 
 Then the site is found by testing the inequality
+
 r<sub>1</sub>(0:1) R_t > Sum<sub>k,l</sub><sup>i-1,j-1</sup> h<sub>k,l</sub>
 
 
 ## Step-density model
+Within the step-density model, steps in the surface are assumed to act as diffuse scattering centers for the impinging electrons. The step density SD is proportional to the reflected RHEED intensity I: I = 1- SD.
