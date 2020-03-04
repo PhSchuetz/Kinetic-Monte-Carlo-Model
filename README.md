@@ -23,7 +23,7 @@ The growth dynamics are modelled by a series of discrete events. These are
 
 1. Deposition/ ablation of material
 
-...The deposition occurs frequently with a deposition rate f (typically 1-3 Hz) (i.e., after a time n T = n/f). A number N of ABO<sub>3</sub> unit cells is added to the surface randomly (i.e., a<sub>i,j</sub> = a<sub>i,j</sub> + 1 if u < 1/N, where u is a random number between 0 and 1)
+   The deposition occurs frequently with a deposition rate f (typically 1-3 Hz) (i.e., after a time n T = n/f). A number N of ABO<sub>3</sub> unit cells is added to the surface randomly (i.e., a<sub>i,j</sub> = a<sub>i,j</sub> + 1 if u < 1/N, where u is a random number between 0 and 1)
 
 2. Diffusion of material
 
