@@ -14,12 +14,6 @@ class KMC_Model:
 	a : numpy.ndarray, shape = (DimSize,DimSize)
 		Holds the current height of the deposited crystalline film.
 		
-	h : numpy.ndarray, shape = (DimSize,DimSize)
-		Holds the current hopping rates of each site.
-		
-	e : numpy.ndarray, shape = (DimSize,DimSize)
-		Holds the current evaporation rates of each site.
-		
 	Time : float
 		The currently evolved time.
 	
@@ -30,7 +24,7 @@ class KMC_Model:
 		The current number of IrO2-terminated lattice sites.
 		
 	PulseDuration : float
-		The time estimated for one laser pulse and the deposition of material.
+		The estimated time for one laser pulse and the deposition of material.
 	"""
 
 	def __init__(self, 
