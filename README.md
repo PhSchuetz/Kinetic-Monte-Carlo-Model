@@ -34,7 +34,15 @@ The growth dynamics are modelled by a series of discrete events. These are
    If the surface exhibits a BO<sub>2</sub>-termination it can locally convert to an AO-termiantion (i.e., a<sub>i,j</sub> = a<sub>i,j</sub> - 0.5). The AO-termination is considered thermodynamically stable. The evaporation rate is the product of an attempt rate h<sub>0</sub> and an Arrhenius-type probability of success per attempt with the activation energy E<sub>e</sub>
 
 ## Time evolution
-The events take place instantaneously and in between events the system's state does not change. The distribution P(T) of time intervals T between events is given by P(T) dT = R_t exp(-R_t T) dT, where R_t = Sum<sub>i,j</sub> (h<sub>i,j</sub> + e<sub>i,j</sub>) is the total transition rate. Therefore, the time between events is given by T = - ln[r<sub>1</sub>(0:1)]/R_t, where r<sub>1</sub>(0:1) is a random number between 0 and 1.
+The events take place instantaneously and in between events the system's state does not change. The distribution P(T) of time intervals T between events is given by 
+
+P(T) dT = R_t exp(-R_t T) dT, 
+
+where R_t = Sum<sub>i,j</sub> (h<sub>i,j</sub> + e<sub>i,j</sub>) is the total transition rate. Therefore, the time between events is given by 
+
+T = - ln[r<sub>1</sub>(0:1)]/R_t, 
+
+where r<sub>1</sub>(0:1) is a random number between 0 and 1.
 
 ## Event and site selection 
 The type of event is determined by generating a random number r<sub>1</sub>(0:1) and testing for the inequalities
